@@ -7,7 +7,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: ["http://chattie-pi.vercel.app"],
+    origin: ["https://chattie-praveks-projects.vercel.app"],
   },
 });
 
