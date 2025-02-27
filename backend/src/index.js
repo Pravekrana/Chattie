@@ -19,8 +19,7 @@ const __dirname = path.resolve();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin: [ "https://chattie-pi.vercel.app"],
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  origin: ["https://chattie-praveks-projects.vercel.app"],
   credentials: true
 }));
 
