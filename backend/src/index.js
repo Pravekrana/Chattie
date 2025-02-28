@@ -18,14 +18,12 @@ const __dirname = path.resolve();
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({
-  origin: ["http://localhost:5173",  // For local dev
-      "https://chattie-z0s0.onrender.com", // Backend on Render
-      "https://your-netlify-site.netlify.app" // Frontend on Netlify (Replace this after deploying)
-    ],
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
-}));
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    credentials: true,
+  })
+);
 
 
 app.use("/api/auth", authRoutes);
